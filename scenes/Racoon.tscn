@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnr207rtlukb5"]
+
+[ext_resource type="Script" path="res://scenes/Racoon.gd" id="1_0wn7a"]
+[ext_resource type="SpriteFrames" uid="uid://gk7xkxuh12kn" path="res://assets/GiannyDev/NinjaAdventure/Actor/Monsters/Racoon/racoon.tres" id="1_bo2dd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbvub"]
+size = Vector2(17, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jv3oy"]
+radius = 100.0
+
+[node name="Racoon" type="CharacterBody2D" groups=["enemies"]]
+scale = Vector2(0.84, 0.84)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_0wn7a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_bo2dd")
+animation = &"Walk Left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_pbvub")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_jv3oy")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxelybvmysrdj"]
+
+[ext_resource type="Script" path="res://scenes/Bush.gd" id="1_cwt05"]
+[ext_resource type="Texture2D" uid="uid://bm8es100xod2f" path="res://assets/The Painted Lands - Forest Tileset/bush.png" id="2_vl4td"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_edp8i"]
+radius = 16.0
+
+[node name="Bush" type="StaticBody2D" groups=["bushes"]]
+script = ExtResource("1_cwt05")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vl4td")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 5
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_edp8i")

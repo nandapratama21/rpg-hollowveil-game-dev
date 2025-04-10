@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnbv6govg7bu5"]
+
+[ext_resource type="Script" path="res://scenes/Calamari.gd" id="1_45jho"]
+[ext_resource type="Texture2D" uid="uid://gflvinju6euk" path="res://assets/GiannyDev/NinjaAdventure/Items/Food/Calamari.png" id="1_sm2gf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pu5ix"]
+size = Vector2(13, 13)
+
+[node name="Calamari" type="Area2D"]
+script = ExtResource("1_45jho")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sm2gf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_pu5ix")

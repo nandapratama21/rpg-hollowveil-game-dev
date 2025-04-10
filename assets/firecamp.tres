@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://d03yt21ed84jt"]
+
+[ext_resource type="Texture2D" uid="uid://c4kv4lh44o3hu" path="res://assets/The Painted Lands - Forest Tileset/firecamp.png" id="1_4gat4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mty6s"]
+atlas = ExtResource("1_4gat4")
+region = Rect2(0, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odu1i"]
+atlas = ExtResource("1_4gat4")
+region = Rect2(16, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4bsb"]
+atlas = ExtResource("1_4gat4")
+region = Rect2(32, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b74v5"]
+atlas = ExtResource("1_4gat4")
+region = Rect2(48, 0, 16, 22)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mty6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odu1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4bsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b74v5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

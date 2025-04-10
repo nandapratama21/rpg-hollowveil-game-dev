@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf3ifbitkpyi1"]
+
+[ext_resource type="SpriteFrames" uid="uid://d03yt21ed84jt" path="res://assets/firecamp.tres" id="1_ud2s6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_em6bp"]
+size = Vector2(15, 20)
+
+[node name="FireCamp" type="StaticBody2D"]
+collision_layer = 5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_ud2s6")
+autoplay = "default"
+frame_progress = 0.0774833
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_em6bp")

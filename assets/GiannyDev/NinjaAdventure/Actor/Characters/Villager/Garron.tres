@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://ilis1lj2ds0"]
+
+[ext_resource type="Texture2D" uid="uid://dbuhrmi2erqsw" path="res://assets/GiannyDev/NinjaAdventure/Actor/Characters/OldMan/SpriteSheet.png" id="1_8tx0s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqh2t"]
+atlas = ExtResource("1_8tx0s")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg743"]
+atlas = ExtResource("1_8tx0s")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u72nw"]
+atlas = ExtResource("1_8tx0s")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wan5p"]
+atlas = ExtResource("1_8tx0s")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqh2t")
+}],
+"loop": true,
+"name": &"Idle Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg743")
+}],
+"loop": true,
+"name": &"Idle Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u72nw")
+}],
+"loop": true,
+"name": &"Idle Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wan5p")
+}],
+"loop": true,
+"name": &"Idle Up",
+"speed": 5.0
+}]

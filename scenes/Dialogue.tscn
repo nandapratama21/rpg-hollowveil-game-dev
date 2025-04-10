@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://7qbu0jpfsqoi"]
+
+[ext_resource type="Texture2D" uid="uid://ywefy0mwaj34" path="res://assets/ericdsw_dialog/dialogue_backgroung.png" id="1_4jbft"]
+[ext_resource type="Script" path="res://scenes/Dialogue.gd" id="1_n6wsj"]
+[ext_resource type="AudioStream" uid="uid://biruqs8eenyli" path="res://assets/SoundEffect_elevenlabs/typing_dialog_sound_effect.mp3" id="3_svrn4"]
+
+[sub_resource type="SystemFont" id="SystemFont_buwhu"]
+subpixel_positioning = 0
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n6wsj")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -200.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_4jbft")
+region_rect = Rect2(0, 0, 12, 12)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0.160784, 0.152941, 0.0156863, 1)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = -180.0
+offset_right = -70.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = SubResource("SystemFont_buwhu")
+theme_override_font_sizes/normal_font_size = 20
+text = "Hello, this is a dialog box example text."
+fit_content = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="TypeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_svrn4")
+volume_db = -10.0

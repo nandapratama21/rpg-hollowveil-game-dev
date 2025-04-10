@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxt0siny20jtv"]
+
+[ext_resource type="Script" path="res://scenes/Reptile.gd" id="1_cb1un"]
+[ext_resource type="SpriteFrames" uid="uid://bmtxwitclyfyi" path="res://assets/GiannyDev/NinjaAdventure/Actor/Monsters/Reptile/Reptile.tres" id="2_xg0v0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_alufr"]
+radius = 120.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj5br"]
+size = Vector2(16, 17)
+
+[node name="Reptile" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_cb1un")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_xg0v0")
+animation = &"Walk Down"
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_alufr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_gj5br")

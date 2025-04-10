@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://hvk63l518dop"]
+
+[ext_resource type="Texture2D" uid="uid://bfgjyk6eoeqi2" path="res://assets/RPG_Items_Retro_Itchio/Weapons/Weapon_12.png" id="1_2fw3i"]
+[ext_resource type="Script" path="res://scenes/InventoryItem.gd" id="2_kwyvh"]
+
+[resource]
+script = ExtResource("2_kwyvh")
+item_name = "stick"
+item_texture = ExtResource("1_2fw3i")
+item_type = "weapon"
+usable = true
+damage = 10

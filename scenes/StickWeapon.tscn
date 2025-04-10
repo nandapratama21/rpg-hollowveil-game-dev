@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://duu0vomfbnhuu"]
+
+[ext_resource type="Script" path="res://scenes/StickWeapon.gd" id="1_ps1p3"]
+[ext_resource type="Resource" uid="uid://hvk63l518dop" path="res://assets/Stick.tres" id="2_mcpwa"]
+[ext_resource type="Texture2D" uid="uid://bfgjyk6eoeqi2" path="res://assets/RPG_Items_Retro_Itchio/Weapons/Weapon_12.png" id="2_qyeps"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rngsi"]
+radius = 16.0
+
+[node name="StickWeapon" type="StaticBody2D"]
+script = ExtResource("1_ps1p3")
+item = ExtResource("2_mcpwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qyeps")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.68, 0.68)
+shape = SubResource("CircleShape2D_rngsi")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

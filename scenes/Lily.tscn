@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://lttp0i6e7nji"]
+
+[ext_resource type="SpriteFrames" uid="uid://ch8huixh4s3pm" path="res://assets/GiannyDev/NinjaAdventure/Actor/Characters/Cavegirl/girl.tres" id="1_0psje"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpxs0"]
+size = Vector2(16, 16)
+
+[node name="Lily" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_0psje")
+animation = &"Idle Down"
+autoplay = "Idle Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vpxs0")

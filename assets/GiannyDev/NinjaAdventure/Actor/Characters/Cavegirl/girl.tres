@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://ch8huixh4s3pm"]
+
+[ext_resource type="Texture2D" uid="uid://djagy6rmtycf1" path="res://assets/GiannyDev/NinjaAdventure/Actor/Characters/Cavegirl/SpriteSheet.png" id="1_hvl4d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1uvv"]
+atlas = ExtResource("1_hvl4d")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuwg3"]
+atlas = ExtResource("1_hvl4d")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inxgv"]
+atlas = ExtResource("1_hvl4d")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y28lh"]
+atlas = ExtResource("1_hvl4d")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1uvv")
+}],
+"loop": true,
+"name": &"Idle Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuwg3")
+}],
+"loop": true,
+"name": &"Idle Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inxgv")
+}],
+"loop": true,
+"name": &"Idle Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y28lh")
+}],
+"loop": true,
+"name": &"Idle Up",
+"speed": 5.0
+}]

@@ -1,0 +1,198 @@
+[gd_scene load_steps=4 format=3 uid="uid://c846bhovxoicm"]
+
+[ext_resource type="Script" path="res://scenes/Credits.gd" id="1_k2ja6"]
+[ext_resource type="AudioStream" uid="uid://daqax1uibgn8h" path="res://assets/SoundEffect_elevenlabs/menu_music.mp3" id="2_n8wfc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlc2w"]
+bg_color = Color(0.196078, 0.196078, 0.27451, 0.901961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.909804, 0.866667, 0.717647, 0.352941)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.309804)
+shadow_size = 5
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k2ja6")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0862745, 0.0862745, 0.137255, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_n8wfc")
+volume_db = -10.0
+autoplay = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Spacer1" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.866667, 0.717647, 1)
+theme_override_colors/font_shadow_color = Color(0.117647, 0.145098, 0.27451, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 64
+text = "HollowVeil"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.866667, 0.717647, 0.901961)
+theme_override_font_sizes/font_size = 24
+text = "Thank you for playing!"
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="TeamSection" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TeamTitle" type="Label" parent="ScrollContainer/VBoxContainer/TeamSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.788235, 0.752941, 0.666667, 1)
+theme_override_font_sizes/font_size = 32
+text = "Development Team"
+horizontal_alignment = 1
+
+[node name="DeveloperCredit" type="Label" parent="ScrollContainer/VBoxContainer/TeamSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Nanda Pratama"
+horizontal_alignment = 1
+
+[node name="RoleLabel" type="Label" parent="ScrollContainer/VBoxContainer/TeamSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.666667, 0.639216, 0.584314, 1)
+theme_override_font_sizes/font_size = 20
+text = "Game Developer"
+horizontal_alignment = 1
+
+[node name="Spacer3" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="AssetSection" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="AssetsTitle" type="Label" parent="ScrollContainer/VBoxContainer/AssetSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.788235, 0.752941, 0.666667, 1)
+theme_override_font_sizes/font_size = 32
+text = "Assets"
+horizontal_alignment = 1
+
+[node name="ArtCredit" type="Label" parent="ScrollContainer/VBoxContainer/AssetSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Art – GiannyDev, RPG_Items_Retro_Itchio (by Blodyavenger), and The Painted Lands - Forest Tileset (by AntarcticBees)
+
+Dialog System – ericdsw’s dialogue_system_test and WorldEaterDev’s HowTo: A Simple Dialogue System in Godot
+Sword & Stick Assets – RPG_Items_Retro_Pack by Blodyavenger
+
+Tileset – The Painted Lands - Forest by AntarcticBees"
+horizontal_alignment = 1
+
+[node name="MusicCredit" type="Label" parent="ScrollContainer/VBoxContainer/AssetSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Sound & Music - ElevenLabs"
+horizontal_alignment = 1
+
+[node name="Spacer4" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Spacer5" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="SpecialThanksSection" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ThanksTitle" type="Label" parent="ScrollContainer/VBoxContainer/SpecialThanksSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.788235, 0.752941, 0.666667, 1)
+theme_override_font_sizes/font_size = 32
+text = "Special Thanks"
+horizontal_alignment = 1
+
+[node name="ThanksText" type="Label" parent="ScrollContainer/VBoxContainer/SpecialThanksSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Thanks to everyone who tested the game
+and provided valuable feedback."
+horizontal_alignment = 1
+
+[node name="Spacer6" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+
+[node name="ReturnSection" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ReturnLabel" type="Label" parent="ScrollContainer/VBoxContainer/ReturnSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.866667, 0.717647, 1)
+theme_override_font_sizes/font_size = 24
+text = "Press any key to return to the main menu"
+horizontal_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="ScrollContainer/VBoxContainer/ReturnSection"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(1, 0.956863, 0.843137, 1)
+theme_override_colors/font_color = Color(0.909804, 0.866667, 0.717647, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxFlat_rlc2w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rlc2w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rlc2w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlc2w")
+text = "Return to Main Menu"
+
+[node name="Spacer7" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/ReturnSection/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

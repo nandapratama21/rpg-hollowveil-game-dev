@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmq31o12bhgat"]
+
+[ext_resource type="Script" path="res://scenes/boy_player.gd" id="1_a7fbk"]
+[ext_resource type="SpriteFrames" uid="uid://dukk6aw2hyha1" path="res://assets/GiannyDev/NinjaAdventure/Actor/Characters/Boy/Boy_player.tres" id="2_mhtuv"]
+[ext_resource type="PackedScene" uid="uid://44w8vxtd4loi" path="res://scenes/InventoryUI.tscn" id="4_0woha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5tgx"]
+size = Vector2(14, 15)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_mask = 5
+script = ExtResource("1_a7fbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 9.5)
+shape = SubResource("RectangleShape2D_b5tgx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.5, 3.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-8, 9)
+sprite_frames = ExtResource("2_mhtuv")
+animation = &"Attack Right"
+frame_progress = 0.345973
+
+[node name="InventoryUI" parent="." instance=ExtResource("4_0woha")]
+visible = false
+offset_left = -66.0
+offset_top = -63.0
+offset_right = -26.0
+offset_bottom = -23.0
+scale = Vector2(0.56, 0.56)
+
+[node name="WeaponMountUp" type="Marker2D" parent="."]
+position = Vector2(0, -4)
+rotation = 3.14159
+
+[node name="WeaponMountDown" type="Marker2D" parent="."]
+position = Vector2(4, 8)
+rotation = 0.785398
+
+[node name="WeaponMountLeft" type="Marker2D" parent="."]
+position = Vector2(-8, 0)
+rotation = 3.14159
+
+[node name="WeaponMountRight" type="Marker2D" parent="."]
+position = Vector2(8, 0)
+
+[node name="WeaponSprite" type="Sprite2D" parent="."]
+position = Vector2(-11, 14)
+scale = Vector2(0.48, 0.48)

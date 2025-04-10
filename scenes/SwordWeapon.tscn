@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca1yfwk70s3n3"]
+
+[ext_resource type="Script" path="res://scenes/SwordWeapon.gd" id="1_bewgl"]
+[ext_resource type="Texture2D" uid="uid://cps31qpcenaau" path="res://assets/RPG_Items_Retro_Itchio/Weapons/Weapon_03.png" id="2_3o50i"]
+[ext_resource type="Resource" uid="uid://b42qhsvrcn7ai" path="res://assets/Sword.tres" id="2_bhgjr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rngsi"]
+radius = 16.0
+
+[node name="SwordWeapon" type="StaticBody2D"]
+script = ExtResource("1_bewgl")
+item = ExtResource("2_bhgjr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3o50i")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.68, 0.68)
+shape = SubResource("CircleShape2D_rngsi")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
