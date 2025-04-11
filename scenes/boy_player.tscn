@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmq31o12bhgat"]
+[gd_scene load_steps=4 format=3 uid="uid://dmq31o12bhgat"]
 
 [ext_resource type="Script" path="res://scenes/boy_player.gd" id="1_a7fbk"]
 [ext_resource type="SpriteFrames" uid="uid://dukk6aw2hyha1" path="res://assets/GiannyDev/NinjaAdventure/Actor/Characters/Boy/Boy_player.tres" id="2_mhtuv"]
-[ext_resource type="PackedScene" uid="uid://44w8vxtd4loi" path="res://scenes/InventoryUI.tscn" id="4_0woha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5tgx"]
 size = Vector2(14, 15)
@@ -23,14 +22,6 @@ position = Vector2(-8, 9)
 sprite_frames = ExtResource("2_mhtuv")
 animation = &"Attack Right"
 frame_progress = 0.345973
-
-[node name="InventoryUI" parent="." instance=ExtResource("4_0woha")]
-visible = false
-offset_left = -66.0
-offset_top = -63.0
-offset_right = -26.0
-offset_bottom = -23.0
-scale = Vector2(0.56, 0.56)
 
 [node name="WeaponMountUp" type="Marker2D" parent="."]
 position = Vector2(0, -4)

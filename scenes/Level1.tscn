@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://fmhpuv2ifdjs"]
+[gd_scene load_steps=18 format=4 uid="uid://fmhpuv2ifdjs"]
 
 [ext_resource type="TileSet" uid="uid://dy0ko4845a5oq" path="res://assets/Forest_tileset.tres" id="1_pa2nf"]
 [ext_resource type="Script" path="res://scenes/Level1.gd" id="1_xlvg8"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://hle0smp6iat1" path="res://scenes/EnemySpawner.tscn" id="12_mfuhk"]
 [ext_resource type="PackedScene" uid="uid://ca1yfwk70s3n3" path="res://scenes/SwordWeapon.tscn" id="14_8wq3s"]
 [ext_resource type="PackedScene" uid="uid://bnbv6govg7bu5" path="res://scenes/Calamari.tscn" id="15_xxqml"]
+[ext_resource type="PackedScene" uid="uid://44w8vxtd4loi" path="res://scenes/InventoryUI.tscn" id="16_72sjb"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_xlvg8")
@@ -293,6 +294,23 @@ position = Vector2(2932, 15438)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MarginContainer" parent="CanvasLayer" instance=ExtResource("9_v7426")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="InventoryUI" parent="CanvasLayer2" instance=ExtResource("16_72sjb")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -124.0
+offset_right = -136.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
 
 [connection signal="king_racoon_died" from="KingRacoon" to="." method="_on_king_racoon_died"]
 [connection signal="dialogue_triggered" from="DialogueTriggerBushBlocked" to="." method="on_dialogue_trigger_activated"]

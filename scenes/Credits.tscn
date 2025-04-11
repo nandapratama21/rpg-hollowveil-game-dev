@@ -121,7 +121,7 @@ theme_override_font_sizes/font_size = 32
 text = "Assets"
 horizontal_alignment = 1
 
-[node name="ArtCredit" type="Label" parent="ScrollContainer/VBoxContainer/AssetSection"]
+[node name="MainCredit" type="Label" parent="ScrollContainer/VBoxContainer/AssetSection"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Art – GiannyDev, RPG_Items_Retro_Itchio (by Blodyavenger), and The Painted Lands - Forest Tileset (by AntarcticBees)
@@ -129,7 +129,9 @@ text = "Art – GiannyDev, RPG_Items_Retro_Itchio (by Blodyavenger), and The Pai
 Dialog System – ericdsw’s dialogue_system_test and WorldEaterDev’s HowTo: A Simple Dialogue System in Godot
 Sword & Stick Assets – RPG_Items_Retro_Pack by Blodyavenger
 
-Tileset – The Painted Lands - Forest by AntarcticBees"
+Tileset – The Painted Lands - Forest by AntarcticBees
+
+InventoryUI: DALL-E"
 horizontal_alignment = 1
 
 [node name="MusicCredit" type="Label" parent="ScrollContainer/VBoxContainer/AssetSection"]
