@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 InventoryManager="*res://scenes/InventoryManager.gd"
 Global="*res://scenes/global.gd"
 
+[display]
+
+window/size/resizable=false
+
 [input]
 
 ui_left={
