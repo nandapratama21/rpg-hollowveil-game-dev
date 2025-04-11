@@ -166,22 +166,9 @@ func _create_pause_menu():
 	menu_button.pressed.connect(_on_main_menu_button_pressed)
 	buttons_container.add_child(menu_button)
 
-	# Quit button
-	var quit_button = Button.new()
-	quit_button.text = "Quit Game"
-	quit_button.add_theme_font_size_override("font_size", 24)
-	quit_button.add_theme_color_override("font_color", Color(0.91, 0.867, 0.718))
-	quit_button.add_theme_color_override("font_hover_color", Color(1, 0.957, 0.843))
-	quit_button.add_theme_stylebox_override("normal", button_normal_style)
-	quit_button.add_theme_stylebox_override("hover", button_hover_style)
-	quit_button.add_theme_stylebox_override("focus", button_hover_style)
-	quit_button.pressed.connect(_on_quit_button_pressed)
-	buttons_container.add_child(quit_button)
-
 	# Make sure all the buttons have process_mode set to PROCESS_MODE_WHEN_PAUSED
 	resume_button.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	menu_button.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
-	quit_button.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 
 
 func toggle_pause():

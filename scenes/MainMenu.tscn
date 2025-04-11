@@ -149,6 +149,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_mqubo")
 text = "How To Play"
 
 [node name="QuitButton" type="Button" parent="MainContainer/VBoxContainer/ButtonsContainer/ButtonsMargin/Buttons"]
+visible = false
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0.956863, 0.843137, 1)
 theme_override_colors/font_color = Color(0.909804, 0.866667, 0.717647, 1)
