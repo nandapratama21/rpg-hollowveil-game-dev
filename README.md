@@ -1,3 +1,10 @@
+# Name: Muhammad Nanda Pratama
+
+## 📝 Introduction
+
+**Hollowveil** is a charming top-down adventure RPG where you play as Aren, a shipwreck survivor who washes up on a mysterious island. After regaining consciousness on an unfamiliar beach, Aren must explore the island, uncovering its secrets and the strange events that have twisted its once-peaceful forests.
+
+Guided by a local herbalist named Lily and a reclusive former warrior named Garron, Aren learns about the rise of the Raccoon King—an enormous creature who was once a harmless forest dweller. Now empowered by a strange, magical calamari, the Raccoon King rules the forest with brute strength, supported by an army of raccoon and reptile minions.
 
 ## 🎮 Diversifiers
 
