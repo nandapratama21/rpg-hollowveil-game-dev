@@ -21,6 +21,7 @@ Guided by a local herbalist named Lily and a reclusive former warrior named Garr
 
 ### Movement
 - **WASD** or **Arrow Keys**: Move Aren in four directions.
+- **Shift** - Sprint (consumes stamina)
 
 ### Combat
 - **Space** / **E**: Attack with the equipped weapon.
