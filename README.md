@@ -39,6 +39,34 @@ Guided by a local herbalist named Lily and a reclusive former warrior named Garr
 
 ---
 
+## 🏃‍♂️ Latest Update: Sprint & Stamina System
+
+**Balancing the Journey to Raccoon King**
+
+### ⚔️ The Challenge
+Based on feedback, players needed to reach the Raccoon King in under 6 minutes when running non-stop. The original movement speed made this goal difficult to achieve.
+
+### 🛠️ The Solution
+To address this, I redesigned the map to be more compact and introduced a sprint system with stamina management:
+
+### 🚀 New Features:
+- **Sprint Mechanic** ➤ Hold Shift to run faster
+- **Stamina System** ➤ A blue stamina bar appears in the UI
+- **Smart Balancing** ➤ Sprint drains stamina to prevent infinite speed runs
+
+### 🔧 Technical Implementation
+- **Sprint Speed**: 400 units/sec (vs 300 normal speed)
+- **Stamina Drain**: 30 units/sec while sprinting
+- **Stamina Regen**: 15 units/sec when idle or walking
+- **Visual Feedback**: New StaminaUI component added to HUD
+
+### 🎮 Player Experience
+This system encourages players to strategically manage stamina, creating a balance between speed and endurance. It adds tension and depth, making every journey toward the Raccoon King feel like a calculated push.
+
+*Hollowveil - A top-down RPG adventure where Aren must escape a mysterious island and defeat the Raccoon King.*
+
+---
+
 ## 📦 Sources & Credits
 
 ### 🎮 Dialogue Systems
@@ -48,7 +76,7 @@ Guided by a local herbalist named Lily and a reclusive former warrior named Garr
 ### 🖼️ Art & Assets
 - [AntarcticBees – The Painted Lands: Forest Tileset (Itch.io)](https://antarcticbees.itch.io/antarcticbees-the-painted-lands-forest)  
 - [BlodyAvenger – RPG Items Retro Pack (Itch.io)](https://blodyavenger.itch.io/rpg-items-retro-pack)  
-- [GiannyDev – Udemy Profile](https://www.udemy.com/user/gianny-dev/)  
+- [GiannyDev – Udemy Profile](https://www.udemy.com/user/gianny-dev/)
 
 
 
