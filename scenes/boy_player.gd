@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 300.0
-@export var sprint_speed = 400.0  # Sprint speed when holding Shift
+@export var sprint_speed = 300.0  # Sprint speed when holding Shift
 @export var max_health = 100
 @export var health = 100
 @export var max_stamina = 100.0
