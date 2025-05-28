@@ -1,11 +1,21 @@
 extends CharacterBody2D
 
 @export var speed = 300.0
+@export var sprint_speed = 400.0  # Sprint speed when holding Shift
 @export var max_health = 100
 @export var health = 100
+@export var max_stamina = 100.0
+@export var stamina = 100.0
+@export var stamina_depletion_rate = 30.0
+@export var stamina_recovery_rate = 15.0
+@export var sprint_cooldown = 1.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var weapon_sprite = $WeaponSprite if has_node("WeaponSprite") else null
+
+# Sprint-related variables
+var is_sprinting = false
+var can_sprint = true
 
 var equipped_item = null
 var attack_cooldown = false
@@ -17,6 +27,7 @@ var knockback_resistance = 0.5
 var current_weapon_index = -1
 
 signal health_changed(new_health)
+signal stamina_changed(new_stamina, max_stamina)
 
 
 func _ready():
@@ -45,10 +56,28 @@ func _ready():
 		print("Found inventory UI")
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# Skip if attacking
 	if is_attacking:
 		return
+		
+	# Stamina management
+	if is_sprinting:
+		stamina -= stamina_depletion_rate * _delta
+		if stamina <= 0:
+			stamina = 0
+			is_sprinting = false
+			can_sprint = false
+			# Start cooldown timer
+			var timer = get_tree().create_timer(sprint_cooldown)
+			await timer.timeout
+			can_sprint = true
+	elif stamina < max_stamina:
+		stamina += stamina_recovery_rate * _delta
+		stamina = min(stamina, max_stamina)
+		
+	# Emit signal for UI update
+	emit_signal("stamina_changed", stamina, max_stamina)
 
 	# Get input direction
 	var direction = Vector2.ZERO
@@ -67,6 +96,9 @@ func _physics_process(delta):
 
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
+	
+	# Check sprint input (Shift key)
+	is_sprinting = Input.is_action_pressed("sprint") and can_sprint and stamina > 0 and direction.length() > 0
 
 	# Normalize to prevent faster diagonal movement
 	if direction.length() > 0:
@@ -101,8 +133,11 @@ func _physics_process(delta):
 		):
 			animated_sprite.play("Idle " + facing_direction)
 
+	# Apply the appropriate speed based on whether sprinting or not
+	var current_speed = sprint_speed if is_sprinting else speed
+	
 	# Velocity
-	velocity = direction * speed
+	velocity = direction * current_speed
 
 	# Move the character
 	move_and_slide()

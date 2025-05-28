@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6qaot8jk4tys"]
+
+[ext_resource type="Script" path="res://scenes/StaminaUI.gd" id="1_vpb7o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2wa8"]
+bg_color = Color(0.152941, 0.152941, 0.152941, 0.501961)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7gsi"]
+bg_color = Color(0.105882, 0.439216, 0.968627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="StaminaUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -640.0
+offset_bottom = -640.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vpb7o")
+
+[node name="StaminaBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 40.0
+offset_right = 200.0
+offset_bottom = 55.0
+theme_override_styles/background = SubResource("StyleBoxFlat_t2wa8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x7gsi")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 74.0
+offset_bottom = 46.0
+text = "Stamina"
